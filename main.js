@@ -4,20 +4,13 @@ var countDownDate = new Date('April 23, 2020 23:45:00');
 
 //function to execute goal
 function countDownTimer() {
-
-//variable set to current time
+    //variable set to current time
     var currentTime = new Date().getTime();
 
-<<<<<<< HEAD
-//difference is all the milliseconds, from getTime, between currentime and countDownDate
-    var difference = countDownDate.getTime() - currentTime;
-
-=======
     //difference is all the milliseconds, from getTime, between currentime and countDownDate
     var difference = countDownDate.getTime() - currentTime;
 
     //finding total amount for each unit of time
->>>>>>> master
     var totalmilliseconds = difference;
     var totalseconds = Math.floor(totalmilliseconds / 1000);
     var totalminutes = Math.floor(totalseconds / 60);
@@ -37,28 +30,9 @@ function countDownTimer() {
 
 
 // plugging the reaminders for each unit into the demo id of the html. Also concatinating the strings to name each number
-<<<<<<< HEAD
-    document.getElementById("demo").innerHTML =  totaldays + " Days "  + rhours + " Hour " + rminutes + " Minutes: " + rseconds + " Seconds " +  rmillisec +" Milliseconds ";
-}
-
-
-
-//setting the interval I want my function for countdown to run at, every second. (This is seen by javascript before it runs the function)
-var  countDownInterval = setInterval(countDownTimer, 1000);
-
-
-
-
-
-
-
-
-
-=======
     document.getElementById("demo").innerHTML =  totaldays + " : "  + rhours + " : " + rminutes + " : " + rseconds;
 }
 
 
 //setting the interval I want my function for countdown to run at, every second. (This is seen by javascript before it runs the function)
 var  countDownInterval = setInterval(countDownTimer, 1000);
->>>>>>> master
