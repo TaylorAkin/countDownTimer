@@ -19,12 +19,9 @@ function countDownTimer() {
 
 //findind the remainder left for each unit of time
     var rmillisec = totalmilliseconds % 1000;
-    var rseconds = totalseconds % 60;
-        if (rseconds < 10) {
-            rseconds = ('0' + rseconds);
-        }
-    var rminutes = totalminutes % 60;
-    var rhours = totalhours % 24;
+    var rseconds = correctNumbers(totalseconds % 60);
+    var rminutes = correctNumbers(totalminutes % 60);
+    var rhours = correctNumbers(totalhours % 24);
     
    
 
@@ -33,6 +30,15 @@ function countDownTimer() {
     document.getElementById("demo").innerHTML =  totaldays + " : "  + rhours + " : " + rminutes + " : " + rseconds;
 }
 
+function correctNumbers(n){
+    // get the number, see if it is less than 10
+    // if so return "0" + n
+    if(n < 10){
+        return "0" + n;
+    } else {
+        return n;
+    }
+}
 
 //setting the interval I want my function for countdown to run at, every second. (This is seen by javascript before it runs the function)
 var  countDownInterval = setInterval(countDownTimer, 1000);
