@@ -36,13 +36,3 @@ function countDownTimer() {
 
 //setting the interval I want my function for countdown to run at, every second. (This is seen by javascript before it runs the function)
 var  countDownInterval = setInterval(countDownTimer, 1000);
-
-
-
-
-
-
-
-
-
-
