@@ -20,6 +20,9 @@ function countDownTimer() {
 //findind the remainder left for each unit of time
     var rmillisec = totalmilliseconds % 1000;
     var rseconds = totalseconds % 60;
+        if (rseconds < 10) {
+            rseconds = ('0' + rseconds);
+        }
     var rminutes = totalminutes % 60;
     var rhours = totalhours % 24;
     
@@ -27,7 +30,7 @@ function countDownTimer() {
 
 
 // plugging the reaminders for each unit into the demo id of the html. Also concatinating the strings to name each number
-    document.getElementById("demo").innerHTML =  totaldays + " Days "  + rhours + " Hour " + rminutes + " Minutes: " + rseconds + " Seconds " +  rmillisec +" Milliseconds ";
+    document.getElementById("demo").innerHTML =  totaldays + " : "  + rhours + " : " + rminutes + " : " + rseconds;
 }
 
 
